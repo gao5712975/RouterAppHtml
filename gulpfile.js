@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var watchify = require('watchify');//加速browserify编译
-var babelify = require('babelify'); 
-var browserify = require('browserify'); 
+var babelify = require('babelify');
+var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var pretty = require('prettysize'); //文字格式化
 var del = require('del'); //文件删除
@@ -11,6 +11,8 @@ var gulpWatch = require('gulp-watch'); //监听插件
 var babelES2015Preset = require('babel-preset-es2015');//解析ES6
 var babelDecoratorsTransform = require('babel-plugin-transform-decorators-legacy').default; //解析ES7
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var buffer = require('gulp-buffer');
 var autoprefixer = require('gulp-autoprefixer');//根据设置浏览器版本自动处理浏览器前缀
 
 /**
@@ -23,7 +25,7 @@ function buildBrowserify(options) {
         watch:false
     };
     options = assign(defaultOptions,options);
-    
+
     var b = browserify({
         entries: ['app/app.js'],
         debug: false
@@ -42,6 +44,8 @@ function buildBrowserify(options) {
         return b.bundle()  // 多个文件打包成一个文件
             .on('error', onError)
             .pipe(source('app.bundle.js'))
+            // .pipe(buffer())
+            // .pipe(uglify())
             .pipe(gulp.dest('www/build/js'));
     }
 }
@@ -50,7 +54,7 @@ function buildBrowserify(options) {
  * 任务监听
  */
 gulp.task('default',['clean'],function (done) {
-    runSequence(['font','html','css','js'],function () {
+    runSequence(['font','html','css','js','static'],function () {
         gulpWatch('app/**/*.html',function () {
             gulp.start('html')
         });
@@ -65,7 +69,7 @@ gulp.task('default',['clean'],function (done) {
  * 手动编译
  */
 gulp.task('build',['clean'],function (done) {
-    runSequence(['font','html','css','js'],function () {
+    runSequence(['font','html','css','js','static'],function () {
         buildBrowserify({watch:false}).on('end', done);
     })
 });
@@ -75,6 +79,14 @@ gulp.task('build',['clean'],function (done) {
  */
 gulp.task('clean', function(){
     return del('www/build');
+});
+
+/**
+ * 拷贝静态资源
+ */
+gulp.task('static',function () {
+    return gulp.src(['static/**'])
+        .pipe(gulp.dest('www/build/static'));
 });
 
 /**
@@ -98,12 +110,13 @@ gulp.task('html',function () {
  */
 gulp.task('css',function () {
     var options = {
-        src: 'app/theme/app.+(md|ios).scss',
+        src: 'app/theme/app.+(md).scss',
         dest: 'www/build/css',
         sassOptions: {
             includePaths: [
                 'node_modules/ionic-angular',
-                'node_modules/ionicons/dist/scss'
+                'node_modules/ionicons/dist/scss',
+                'app/business/home'
             ]
         },
         onError: function(err) {
@@ -139,7 +152,8 @@ gulp.task('js',function () {
             'node_modules/es6-shim/es6-shim.min.js'
         ]
     )
-        .pipe(gulp.dest('www/build/js'));
+    .pipe(uglify())
+    .pipe(gulp.dest('www/build/js'));
 });
 
 
@@ -161,4 +175,3 @@ Date.prototype.dateFormat = function (str) {
 function onLog(log){
     console.log((log = log.split(' '), log[0] = pretty(log[0]), log.join(' '), log += ' ' + new Date().dateFormat("yyyy-MM-dd HH:mm:ss")));
 }
-
