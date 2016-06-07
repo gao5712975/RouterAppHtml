@@ -1,5 +1,6 @@
 @import "home";
 @import "home1";
+@import "menu";
 
 .md .button-margin-auto{
     margin: 0.4rem auto;
@@ -32,27 +33,29 @@
   top: 48rem;
 }
 
-@media screen and (max-width: 720px) {
-    .md{
-      $fontSize:16px;
-      font-size: 1.6rem;
-    }
-}
-@media screen and (max-width: 480px) {
-    .md{
-      $fontSize:14px;
-      font-size: 1.4rem;
-    }
-}
-@media screen and (max-width: 360px) {
-    .md{
-      $fontSize:12px;
-      font-size: 1.2rem;
-    }
-}
-@media screen and (max-width: 320px) {
-    .md{
-      $fontSize:10px;
-      font-size: 1rem;
-    }
-}
+
+
+//
+//@media screen and (max-width: 720px) {
+//  .md{
+//    font-size: 16px;
+//  }
+//}
+//@media screen and (max-width: 480px) {
+//  .md{
+//    $fontSize:14px;
+//    font-size: 14px;
+//  }
+//}
+//@media screen and (max-width: 360px) {
+//  .md{
+//    $fontSize:12px;
+//    font-size: 1.2rem;
+//  }
+//}
+//@media screen and (max-width: 320px) {
+//  .md{
+//    $fontSize:10px;
+//    font-size: 1rem;
+//  }
+//}

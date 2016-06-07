@@ -116,7 +116,8 @@ gulp.task('css',function () {
             includePaths: [
                 'node_modules/ionic-angular',
                 'node_modules/ionicons/dist/scss',
-                'app/business/home'
+                'app/business/home',
+                'app/business/menu'
             ]
         },
         onError: function(err) {
