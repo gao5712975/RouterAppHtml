@@ -1,40 +1,55 @@
 @import "home";
 @import "home1";
+@import "home2";
+@import "home3";
+@import "home4";
+@import "home5";
+@import "home6";
 @import "menu";
-
-.md .button-margin-auto{
-    margin: 0.4rem auto;
+$theme: #2F83F5;
+/**
+ * 更改ionic默认样式
+ */
+.md ion-label[fixed] {
+    flex: 0 0 70px;
+    width: 70px;
+    min-width: 70px;
 }
-
-.md .button-outline-margin-auto{
-    margin: 0.4rem auto;
+.md .toolbar {
+    min-height: 4.5rem;
 }
-
-.md .button-width-90{
-    width:90%;
+.md ion-navbar {
+    min-height: 4.5rem;
 }
-
-.md .button-outline-width-90{
-    width:90%;
-}
-
-.md .text-center{
-  text-align: center;
+/**
+ * 自定义样式
+ */
+[vertical-middle] {
+    vertical-align: middle;
 }
 /**
  * 下一步按钮绝对定位
  */
-.md .wf-next-button{
-  position: relative;
-  top: 47.5rem;
+.md .wf-next-button {
+    width: 90%;
+    position: absolute;
+    right: 5%;
+    bottom: 1rem;
 }
-.md .wf-cancel-button{
-  position: relative;
-  top: 48rem;
+.md .wf-next-button .button {
+    font-size: 18px;
 }
-
-
-
+.md .wf-next-button .cancel-butto {
+    font-size: 14px;
+    color: #545454;
+}
+/**
+ * 暂不设置影藏框
+ */
+.md .wf-next-button .hide-button {
+    width: auto;
+    height: 4.5rem;
+}
 //
 //@media screen and (max-width: 720px) {
 //  .md{
