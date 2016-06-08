@@ -25,16 +25,21 @@ ul,li{list-style-type:none}
 
 //设置
 //网络设置 
+.top-switch{margin-bottom: 2rem;}
 .wf-wlConfig-back{background-color: #F3F3F3;}
 .md .toolbar-content ion-title{margin-right: 75px;}
 
 .wf-WIFI ion-label[fixed]{flex: 0 0 180px;}
 
-
 .wf-hmdConfig p{text-align: left;}
 .wf-hmdConfig img{margin: 1.1rem 0;width: 2rem;height: 2rem;}
-
 .wf-hmdConfig-empty img{display: block;margin: 10rem auto} 
+
+.wf-WIFI .conrent-text{position: relative;}
+.wf-WIFI .conrent-text div{width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #F3F3F3;
+                        position: absolute;top: -25px;right: 20px;}
+.wf-WIFI .conrent-text2{border-bottom: 1px solid #E8E8E8;}
+.wf-WIFI .conrent-text p{padding: 1rem 1rem;}
 
 
 //工作模式
@@ -51,17 +56,12 @@ ul,li{list-style-type:none}
 .wf-popup{width: 100%;height: 100%;background:rgba(130,130,130,0.6);position: fixed;z-index: 999;}
 .wf-popup .popup-content{width: 95%;height:18rem;background-color: #fff;margin: 12rem auto;}
 .wf-popup .popup-content img{height: 5rem;position: relative;top:2rem;left: 50%;margin-left: -2.5rem;}
-
+.wf-popup .popup-content p{margin-top: 5rem;text-align: center;font-size: 1.8rem;}
+.wf-popup .popup-content .popup-content-text{margin-top: 0;}
 
 .wf-gzConfig2 .top-text{padding-left: 16px;margin: 1.5rem 0;font-size: 1.6rem;}
 .wf-gzConfig2 .content-text{padding-left: 16px;font-size: 1.6rem;position: relative;height: 7rem;padding-top: 4rem;}
 .wf-gzConfig2 .content-text label{position: absolute;right: 1rem;top: 1rem;}
-
-
-
-
-
-
 
 
 
