@@ -47,6 +47,12 @@ ul,li{list-style-type:none}
 .wf-gzConfig1 p{font-size: 1.4rem;color: #9C9C9C;}
 .wf-gzConfig1-top{margin: 5rem auto 10rem auto;}
 
+//弹出框
+.wf-popup{width: 100%;height: 100%;background:rgba(130,130,130,0.6);position: fixed;z-index: 999;}
+.wf-popup .popup-content{width: 95%;height:18rem;background-color: #fff;margin: 12rem auto;}
+.wf-popup .popup-content img{height: 5rem;position: relative;top:2rem;left: 50%;margin-left: -2.5rem;}
+
+
 .wf-gzConfig2 .top-text{padding-left: 16px;margin: 1.5rem 0;font-size: 1.6rem;}
 .wf-gzConfig2 .content-text{padding-left: 16px;font-size: 1.6rem;position: relative;height: 7rem;padding-top: 4rem;}
 .wf-gzConfig2 .content-text label{position: absolute;right: 1rem;top: 1rem;}
