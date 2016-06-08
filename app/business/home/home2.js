@@ -15,7 +15,7 @@ export class Home2{
         ];
     }
 
-    constructor(nav){
+    constructor(nav,http){
         this.nav = nav;
         /**
          * 默认参数
@@ -23,25 +23,56 @@ export class Home2{
          */
         this.wifi = 'autoIp';
         this.inputType = 'password';
-        this.src = './build/static/img/home/guidance-eye.png';
+        this.backgroundImg = false;
+        this.submitted = false;
+        /**
+         * 表单
+         */
+        this.pppoe = {};
+        this.manualIp = {};
+        this.autoIp = {};
 
     }
 
-    goToHome3(){
-        this.nav.push(Home3)
+    goToHome3(form){
+      if(form == undefined){
+        this.nav.push(Home3);
+      }else if(!form){
+        this.submitted = true;
+      }else if(form){
+        let data = undefined;
+        switch (this.wifi) {
+          case 'autoIp':
+            this.autoIp.wanType = 'dhcp';
+            // this.autoIp.autoset = 0;
+            data = this.autoIp;
+            break;
+          case 'pppoe':
+            this.pppoe.wanType = 'pppoe';
+            // this.pppoe.autoset = 1;
+            data = this.pppoe;
+            break;
+          case 'manualIp':
+            if(!this.manualIp.mask){
+              this.manualIp.mask = '255.255.255.0'
+            }
+            this.manualIp.wanType = 'staticip';
+            data = this.manualIp;
+            break;
+        }
+        this.nav.push(Home3,data)
+      }
     }
     /**
      * 密码显示
      * @return {[type]} [description]
      */
-    updateImg(){
-      if(this.inputType == 'password'){
-        this.inputType = 'text';
-        this.src = './build/static/img/home/guidance-eye1.png';
-      }else{
-        this.inputType = 'password';
-        this.src = './build/static/img/home/guidance-eye.png';
-      }
+    touchstart(){
+      this.inputType = 'text';
+      this.backgroundImg = true;
     }
-
+    touchend(){
+      this.inputType = 'password';
+      this.backgroundImg = false;
+    }
 }

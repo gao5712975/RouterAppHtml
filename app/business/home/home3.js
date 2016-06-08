@@ -1,7 +1,7 @@
 /**
  * Created by moka on 16-5-26.
  */
-import {Page,NavController} from 'ionic-angular'
+import {Page,NavController,NavParams} from 'ionic-angular'
 import {Home4} from './home4'
 
 @Page({
@@ -11,34 +11,48 @@ import {Home4} from './home4'
 export class Home3{
     static get parameters() {
         return [
-            [NavController]
+            [NavController],[NavParams]
         ];
     }
 
-    constructor(nav){
+    constructor(nav,navParams){
         this.nav = nav;
+        this.navParams = navParams
         /**
          * 默认参数
          * @type {String}
          */
         this.inputType = 'password';
-        this.src = './build/static/img/home/guidance-eye.png';
+        this.submitted = false;
+
+        /**
+         * 表单
+         */
+        this.wifiConfig = {};
+        this.wifiConfig.ssid = 'xiaocheng';
     }
 
-    goToHome4(){
-        this.nav.push(Home4,'123456789');
+    goToHome4(form){
+      if(form == undefined){
+        this.nav.push(Home4);
+      }else if(!form){
+        this.submitted = true;
+      }else if(form){
+        this.wifiConfig.encryption = 'mixed-psk';//加密方式
+        let data = Object.assign(this.navParams.data,this.wifiConfig);
+        this.nav.push(Home4,data);
+      }
     }
     /**
      * 密码显示
      * @return {[type]} [description]
      */
-    updateImg(){
-      if(this.inputType == 'password'){
-        this.inputType = 'text';
-        this.src = './build/static/img/home/guidance-eye1.png';
-      }else{
-        this.inputType = 'password';
-        this.src = './build/static/img/home/guidance-eye.png';
-      }
-    }
+     touchstart(){
+       this.inputType = 'text';
+       this.backgroundImg = true;
+     }
+     touchend(){
+       this.inputType = 'password';
+       this.backgroundImg = false;
+     }
 }
