@@ -4,6 +4,11 @@
 import {IndexPage} from '../index/index'
 import {ConfigPage} from '../config/config'
 import {ActionSheetPage} from '../actionSheet/actionSheet'
+import {WlConfigPage} from '../config/wlConfig'
+import {HmdConfig} from '../config/hmdConfig'
+import {GzConfig} from '../config/gzConfig'
+
+
 
 export class GetMenuPage{
 
@@ -20,15 +25,21 @@ export class GetMenuPage{
               icon: 'calendar'
           },
           {
-              page:ConfigPage,
+              page:WlConfigPage,
               index:1,
               title:"网络设置",
               icon: 'contacts'
           },
           {
-              page:ActionSheetPage,
+              page:HmdConfig,
               index:2,
-              title:"ActionSheetPage",
+              title:"黑名单列表",
+              icon:"contacts"
+          },
+          {
+              page:GzConfig,
+              index:3,
+              title:"工作模式",
               icon:"contacts"
           }
       )
