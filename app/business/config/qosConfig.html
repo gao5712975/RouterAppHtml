@@ -1,0 +1,108 @@
+<ion-navbar *navbar wifi>
+	<button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+	<ion-title text-center>QOS限速</ion-title>
+</ion-navbar>
+
+<div class="wf-qos">
+	<span class="qos-top-text">外网带宽</span>
+	
+	
+	<ion-grid class="qos-top-case">
+			<ion-row>
+				<ion-col width-30>
+					<div>
+						<span class="qos-top-number">348</span>
+						<span class="qos-top-kb">KB/S</span>
+					</div>
+					<p>上传宽带</p>
+				</ion-col>
+
+				<img src="../../build/static/img/config/QOS1.png" class="top-case-img"/>
+				
+				<ion-col width-30>
+					<p>11111111111</p>
+				</ion-col>
+				
+			</ion-row>
+		</ion-grid>
+	
+	
+</div>
+
+
+
+<ion-content class="outer-content" overflow-scroll="false">
+	<div class="wf-WIFI wf-hmdConfig">
+		<ion-grid>
+			<ion-row>
+				<ion-col width-10>
+					<img src="../../build/static/img/config/phone.png" />
+				</ion-col>
+
+				<ion-col width-30>
+					<p (click)="openPage(appPages[1].page)">Angelababy</p>
+				</ion-col>
+				
+				<ion-col width-25>
+					<p>11111111111</p>
+				</ion-col>
+				
+			</ion-row>
+		</ion-grid>
+		
+		<ion-grid>
+			<ion-row>
+				<ion-col width-10>
+					<img src="../../build/static/img/config/computer.png" />
+				</ion-col>
+
+				<ion-col width-30>
+					<p (click)="openPage(appPages[1].page)">Hakuna Matata</p>
+				</ion-col>
+				
+				<ion-col width-25>
+					<p>11111111111</p>
+				</ion-col>
+				
+			</ion-row>
+		</ion-grid>
+		
+		<ion-grid>
+			<ion-row>
+				<ion-col width-10>
+					<img src="../../build/static/img/config/ipd.png" />
+				</ion-col>
+
+				<ion-col width-30>
+					<p (click)="openPage(appPages[1].page)">Hakuna Matata</p>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		
+		<ion-grid>
+			<ion-row>
+				<ion-col width-10>
+					<img src="../../build/static/img/config/computer.png" />
+				</ion-col>
+
+				<ion-col width-30>
+					<p (click)="openPage(appPages[1].page)">Hakuna Matata</p>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	
+	<!--<div class="wf-hmdConfig-empty">
+		<img src="../../build/static/img/config/zw.png"/>
+	</div>-->
+	
+	
+	
+	
+	
+	<div class="wf-skip-buttom">
+		<button wifi block (click)="goToHome3()">手动添加黑名单</button>
+	</div>
+</ion-content>

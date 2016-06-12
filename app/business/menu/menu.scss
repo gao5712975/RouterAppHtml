@@ -25,9 +25,10 @@ ul,li{list-style-type:none}
 
 //设置
 //网络设置 
+.wf-WIFI .WIFI-top-text{margin-right: 1rem;}
 .top-switch{margin-bottom: 2rem;}
 .wf-wlConfig-back{background-color: #F3F3F3;}
-.md .toolbar-content ion-title{margin-right: 75px;}
+.md .toolbar-content ion-title{padding-right: 5rem;}
 
 .wf-WIFI ion-label[fixed]{flex: 0 0 180px;}
 
@@ -63,14 +64,15 @@ ul,li{list-style-type:none}
 .wf-gzConfig2 .content-text{padding-left: 16px;font-size: 1.6rem;position: relative;height: 7rem;padding-top: 4rem;}
 .wf-gzConfig2 .content-text label{position: absolute;right: 1rem;top: 1rem;}
 
-
-
-
-
-
-
-
-
+//Qos限速
+.wf-hmdConfig ion-row{border-bottom: 1px #EEEEEE solid;}
+.wf-qos{height: 20rem;background-color: #2780F8;padding: 0 2rem;border-top: 1px solid #3F8CF4;}
+.wf-qos .qos-top-text{display: block;text-align: center;color: #ACC8FA;margin-top: 0.5rem;font-size: 12px;}
+.wf-qos .top-case-img{height: 8rem;}
+.wf-qos .qos-top-case div{text-align: center;}
+.wf-qos .qos-top-case .qos-top-number{color: #fff;font-size: 30px;}
+.wf-qos .qos-top-case .qos-top-kb{font-size: 12px;color: #99C2FA; }
+.wf-qos .qos-top-case p{font-size: 12px;color: #99C2FA;text-align: center;}
 
 
 

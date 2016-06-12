@@ -34,14 +34,14 @@
                     <ion-input text-right type="text" placeholder="ycmedia-sj"></ion-input>
                 </ion-item>
 
-                <ion-item>
+                <ion-item (click)='jmConfigShow = !jmConfigShow'>
                     <ion-label fixed>加密方式</ion-label>
-                    <ion-input text-right type="text" placeholder="请输入子网掩码"></ion-input>
+                    <p  item-right class="WIFI-top-text">{{jmConfig}}</p>
                 </ion-item>
-				<div class="conrent-text" >
+				<div [hidden]='jmConfigShow' class="conrent-text">
 					<div></div>
-					<p text-right class="conrent-text2">WPA2-PSK</p>
-					<p text-right>WPA-PSK</p>
+					<p text-right class="conrent-text2" (click)="jmConfig='WPA2-PSK';jmConfigShow = !jmConfigShow">WPA2-PSK</p>
+					<p text-right (click)="jmConfig='WPA-PSK';jmConfigShow = !jmConfigShow">WPA-PSK</p>
 				</div>
 				
 				
@@ -70,15 +70,15 @@
 		<!--  -->
 		<div *ngSwitchWhen="'WAN'" class="wf-WIFI wf-manualIp">
 			<ion-list>
-                <ion-item>
-                    <ion-label fixed>联网方式</ion-label>
-                    <ion-input text-right type="text" placeholder="PPPOE"></ion-input>
+                <ion-item (click)='lwConfigShow = !lwConfigShow'>
+                    <p  item-left>联网方式</p>
+                    <p  item-right class="WIFI-top-text">{{lwConfig}}</p>
                 </ion-item>
-				<div class="conrent-text" >
+				<div [hidden]="lwConfigShow" class="conrent-text">
 					<div></div>
-					<p text-right class="conrent-text2">PPPOE</p>
-					<p text-right class="conrent-text2">静态IP</p>
-					<p text-right>动态IP</p>
+					<p text-right class="conrent-text2" (click)="lwConfig = 'PPPOE';lwConfigShow = !lwConfigShow">PPPOE</p>
+					<p text-right class="conrent-text2" (click)="lwConfig = '静态IP';lwConfigShow = !lwConfigShow">静态IP</p>
+					<p text-right (click)="lwConfig = '动态IP';lwConfigShow = !lwConfigShow">动态IP</p>
 				</div>
 				
                 <ion-item>

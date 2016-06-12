@@ -9,7 +9,13 @@ import {Page} from 'ionic-angular'
 
 export class WlConfigPage{
     constructor(){
+    	/**
+    	 * 默认值
+    	 */
         this.wifi = 'WAN';
+        this.lwConfigShow = true;
+        this.lwConfig = 'PPPOE';
+        this.jmConfigShow = true;
+        this.jmConfig = '不加密';
     }
-    
 }

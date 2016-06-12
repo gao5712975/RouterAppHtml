@@ -46,7 +46,7 @@ class RouterApp {
         //默认为首次加载app 给引导页面 之后直接给首页
         //首页
         this.rootPage = new GetMenuPage().getMenuPage()[0].page;
-        // this.rootPage = Home;
+        //this.rootPage = Home;
 
         // this.rootPage = new GetMenuPage().pages[0].page;
         // Call any initial plugins when ready

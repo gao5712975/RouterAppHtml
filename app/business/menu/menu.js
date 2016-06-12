@@ -7,7 +7,7 @@ import {ActionSheetPage} from '../actionSheet/actionSheet'
 import {WlConfigPage} from '../config/wlConfig'
 import {HmdConfig} from '../config/hmdConfig'
 import {GzConfig} from '../config/gzConfig'
-
+import {QosConfig} from '../config/qosConfig'
 
 
 export class GetMenuPage{
@@ -40,6 +40,12 @@ export class GetMenuPage{
               page:GzConfig,
               index:3,
               title:"工作模式",
+              icon:"contacts"
+          },
+          {
+              page:QosConfig,
+              index:4,
+              title:"QOS限速",
               icon:"contacts"
           }
       )
