@@ -8,7 +8,7 @@ import {WlConfigPage} from '../config/wlConfig'
 import {HmdConfig} from '../config/hmdConfig'
 import {GzConfig} from '../config/gzConfig'
 import {QosConfig} from '../config/qosConfig'
-
+import {FkConfig} from '../config/fkConfig'
 
 export class GetMenuPage{
 
@@ -46,6 +46,12 @@ export class GetMenuPage{
               page:QosConfig,
               index:4,
               title:"QOS限速",
+              icon:"contacts"
+          },
+          {
+              page:FkConfig,
+              index:5,
+              title:"访客网络",
               icon:"contacts"
           }
       )

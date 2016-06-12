@@ -1,0 +1,43 @@
+<ion-navbar *navbar wifi>
+	<button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+	<ion-title text-center>访客网络</ion-title>
+</ion-navbar>
+
+<ion-content class="wf-wlConfig-back">
+	<div class="wf-WIFI wf-manualIp">
+		<ion-list>				
+			<ion-item class="top-switch">
+                <ion-label fixed>网络开关</ion-label>
+             
+            </ion-item>
+			
+            <ion-item>
+                <ion-label fixed>名称</ion-label>
+                <ion-input text-right type="text" placeholder="ycmedia1111111"></ion-input>
+            </ion-item>
+
+            <ion-item (click)='jmConfigShow = !jmConfigShow'>
+                <ion-label fixed>加密方式</ion-label>
+                <p  item-right class="WIFI-top-text">{{jmConfig}}</p>
+            </ion-item>
+			<div [hidden]='jmConfigShow' class="conrent-text">
+				<div></div>
+				<p text-right class="conrent-text2" (click)="jmConfig='WPA2-PSK';jmConfigShow = !jmConfigShow">WPA2-PSK</p>
+				<p text-right (click)="jmConfig='WPA-PSK';jmConfigShow = !jmConfigShow">WPA-PSK</p>
+			</div>
+			
+			
+            <ion-item>
+                <ion-label fixed>密码</ion-label>
+                <ion-input text-right type="text" placeholder="123456"></ion-input>
+            </ion-item>
+       </ion-list>
+	</div>
+	
+	<div class="wf-skip-buttom">
+		<button wifi block (click)="goToHome3()">应用修改</button>
+	</div>
+		
+</ion-content>

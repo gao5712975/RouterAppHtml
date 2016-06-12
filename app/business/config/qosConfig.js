@@ -9,7 +9,8 @@ import {Page} from 'ionic-angular'
 
 export class QosConfig{
     constructor(){
-        
+       this.qosconfirm1=true;
+       this.cancel=true;
     }
     
 }
