@@ -10,6 +10,7 @@ import {Page} from 'ionic-angular'
 export class FkConfig{
     constructor(){
       this.jmConfigShow = true;
+      this.jmConfig="不加密";
     }
     
 }

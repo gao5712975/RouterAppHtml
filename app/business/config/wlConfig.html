@@ -25,7 +25,7 @@
 		<div *ngSwitchWhen="'WIFI'" class="wf-WIFI wf-manualIp">
 			<ion-list>				
 				<ion-item class="top-switch">
-                    <ion-label fixed>功能开关</ion-label>
+                    <ion-label fixed>功能开关</ion-label> 
                  
                 </ion-item>
 				
@@ -35,7 +35,7 @@
                 </ion-item>
 
                 <ion-item (click)='jmConfigShow = !jmConfigShow'>
-                    <ion-label fixed>加密方式</ion-label>
+                    <ion-label fixed>加密方式</ion-label>  
                     <p  item-right class="WIFI-top-text">{{jmConfig}}</p>
                 </ion-item>
 				<div [hidden]='jmConfigShow' class="conrent-text">
@@ -71,7 +71,8 @@
 		<div *ngSwitchWhen="'WAN'" class="wf-WIFI wf-manualIp">
 			<ion-list>
                 <ion-item (click)='lwConfigShow = !lwConfigShow'>
-                    <p  item-left>联网方式</p>
+                  
+                    <ion-label fixed>联网方式</ion-label> 
                     <p  item-right class="WIFI-top-text">{{lwConfig}}</p>
                 </ion-item>
 				<div [hidden]="lwConfigShow" class="conrent-text">

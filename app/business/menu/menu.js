@@ -9,6 +9,8 @@ import {HmdConfig} from '../config/hmdConfig'
 import {GzConfig} from '../config/gzConfig'
 import {QosConfig} from '../config/qosConfig'
 import {FkConfig} from '../config/fkConfig'
+import {ZfConfig} from '../config/zfConfig'
+import {DmzConfig} from '../config/dmzConfig'
 
 export class GetMenuPage{
 
@@ -52,6 +54,16 @@ export class GetMenuPage{
               page:FkConfig,
               index:5,
               title:"访客网络",
+              icon:"contacts"
+          },{
+              page:ZfConfig,
+              index:6,
+              title:"端口转发",
+              icon:"contacts"
+          },{
+              page:DmzConfig,
+              index:7,
+              title:"dmz",
               icon:"contacts"
           }
       )

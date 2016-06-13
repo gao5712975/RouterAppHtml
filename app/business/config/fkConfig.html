@@ -24,6 +24,7 @@
             </ion-item>
 			<div [hidden]='jmConfigShow' class="conrent-text">
 				<div></div>
+				<p text-right class="conrent-text2" (click)="jmConfig='不加密';jmConfigShow = !jmConfigShow">不加密</p>
 				<p text-right class="conrent-text2" (click)="jmConfig='WPA2-PSK';jmConfigShow = !jmConfigShow">WPA2-PSK</p>
 				<p text-right (click)="jmConfig='WPA-PSK';jmConfigShow = !jmConfigShow">WPA-PSK</p>
 			</div>

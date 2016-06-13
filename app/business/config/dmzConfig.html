@@ -1,0 +1,30 @@
+<ion-navbar *navbar wifi>
+	<button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+	<ion-title text-center>DMZ</ion-title>
+</ion-navbar>
+
+<ion-content class="wf-wlConfig-back">
+
+
+
+	<ion-list class="zf-frame">
+		<ion-item>
+            <ion-label fixed>DMZ状态</ion-label>
+                       
+        </ion-item>
+        
+        <ion-item>
+            <ion-label fixed>DMZIP</ion-label>
+            <ion-input text-right type="text" placeholder="192.168.0.123"></ion-input>
+        </ion-item>
+	</ion-list>
+
+
+
+	<div class="wf-skip-buttom">
+		<button wifi block (click)="goToHome3()">应用修改</button>
+	</div>
+
+</ion-content>

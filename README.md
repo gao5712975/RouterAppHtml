@@ -5,9 +5,9 @@
 在项目目录运行 ionic serve
 
 
-git status 
+git status  查看
 
-git add . 
+git add .  添加
 
 git commit -am '123' 
  

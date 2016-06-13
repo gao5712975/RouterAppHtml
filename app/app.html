@@ -91,7 +91,8 @@
 						</ion-col>
 
 						<ion-col width-70>
-							<p>端口转发</p>
+							<p></p>
+							<p (click)="openPage(appPages[6].page)">端口转发</p>
 						</ion-col>
 					</ion-row>
 				</ion-grid>
@@ -101,9 +102,9 @@
 						<ion-col width-20>
 							<img src="./build/static/img/config/menu-7.png" />
 						</ion-col>
-
+						
 						<ion-col width-70>
-							<p>DMZ</p>
+							<p (click)="openPage(appPages[7].page)">DMZ</p>
 						</ion-col>
 					</ion-row>
 				</ion-grid>
