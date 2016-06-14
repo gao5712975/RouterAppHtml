@@ -4,7 +4,7 @@ ul,li{list-style-type:none}
 .clear:after { content: ""; display: block; height: 0; overflow: hidden; clear: both; visibility: hidden; }
 
 //菜单头部
-.wf-menu{width: 100%;height: 100%;background: url(../../build/static/img/config/bg.jpg);}
+.wf-menu{width: 100%;background: url(../../build/static/img/config/bg.jpg);}
 .wf-menu-header{height: 2.5rem;margin-top: 1rem;position: relative;}
 .wf-menu-header div{color: #999999;font-size: 1.6rem;line-height: 2.5rem;margin-left: 0.4rem;}
 .wf-menu-header span p{color: #999999;font-size: 1.6rem;}   
@@ -99,7 +99,9 @@ ul,li{list-style-type:none}
 .zf-add img{height: 1.5rem;vertical-align: bottom;}
 .zf-without{text-align: center;color: #B4B4B4;font-size: 1.6rem;}
 
-
+//运行状态
+.yx-segment-button{padding-bottom: 0;}
+.yxConfig ion-list{margin: 0;}
 
 
 

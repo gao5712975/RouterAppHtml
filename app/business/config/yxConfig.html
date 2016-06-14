@@ -1,0 +1,210 @@
+<ion-navbar *navbar wifi>
+	<button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+	<ion-title text-center>运行状态</ion-title>
+</ion-navbar>
+
+<ion-content class="wf-wlConfig-back">
+
+	<div padding class="wf-segment-button yx-segment-button">
+		<ion-segment [(ngModel)]="yx">
+			<ion-segment-button value="网络信息">
+				网络信息
+			</ion-segment-button>
+			<ion-segment-button value="数据统计">
+				数据统计
+			</ion-segment-button>
+
+		</ion-segment>
+	</div>
+	
+	
+	<div [ngSwitch]="yx">		
+		<!--  -->
+		<div *ngSwitchWhen="'网络信息'" class="wf-WIFI wf-manualIp yxConfig">
+			
+			<ion-list class="zf-frame zf-frame-back">
+				<ion-item>外网信息</ion-item>
+			</ion-list>
+			
+			<ion-list>	
+				
+                <ion-item>
+                    <ion-label fixed>上网模式：</ion-label>
+                    <ion-input text-right type="text" placeholder="PPPOE（已连接）"></ion-input>
+                </ion-item>
+								
+                <ion-item>
+                    <ion-label fixed>IP地址</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label fixed>子网掩码：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label fixed>默认网关：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>主DNS：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>MAC地址：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>备用DNS：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+           </ion-list>
+           
+           <ion-list class="zf-frame zf-frame-back">
+				<ion-item>内网信息</ion-item>
+			</ion-list>
+                      
+           <ion-list>					
+                <ion-item>
+                    <ion-label fixed>路由器IP：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+								
+                <ion-item>
+                    <ion-label fixed>子网掩码</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label fixed>默认网关：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>MAC地址：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>DHCP服务：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+           </ion-list>
+           
+            <ion-list class="zf-frame zf-frame-back">
+				<ion-item>无线网络信息</ion-item>
+			</ion-list>
+			
+			 <ion-list>					
+                <ion-item>
+                    <ion-label fixed>WiFi名称：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+								
+                <ion-item>
+                    <ion-label fixed>加密方式</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label fixed>信道：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>客户端连接数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>密码：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+           </ion-list>
+           
+		</div>
+
+		
+		<!--  -->
+		<div *ngSwitchWhen="'数据统计'" class="wf-WIFI wf-manualIp yxConfig">
+			
+			<ion-list class="zf-frame zf-frame-back">
+				<ion-item>广域网</ion-item>
+			</ion-list>
+			
+			<ion-list>             
+				<ion-item>
+                    <ion-label fixed>接收的数据包数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+								
+                <ion-item>
+                    <ion-label fixed>接收的字节数</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label fixed>传送的数据包数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>传送的字节数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>			               	
+           </ion-list>
+           
+           <ion-list class="zf-frame zf-frame-back">
+				<ion-item>局域网</ion-item>
+			</ion-list>
+           
+           <ion-list>             
+				<ion-item>
+                    <ion-label fixed>接收的数据包数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+								
+                <ion-item>
+                    <ion-label fixed>接收的字节数</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label fixed>传送的数据包数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>传送的字节数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>			               	
+           </ion-list>
+           
+           <ion-list class="zf-frame zf-frame-back">
+				<ion-item>无线</ion-item>
+			</ion-list>
+			
+			<ion-list>             
+				<ion-item>
+                    <ion-label fixed>接收的数据包数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+								
+                <ion-item>
+                    <ion-label fixed>接收的字节数</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label fixed>传送的数据包数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label fixed>传送的字节数：</ion-label>
+                    <ion-input text-right type="text" placeholder=""></ion-input>
+                </ion-item>			               	
+           </ion-list>
+           
+		</div>			
+
+	</div>
+
+
+</ion-content>

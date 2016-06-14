@@ -1,6 +1,8 @@
 /**
  * Created by moka on 16-5-30.
  */
+
+import {Home} from '../home/home'
 import {IndexPage} from '../index/index'
 import {ConfigPage} from '../config/config'
 import {ActionSheetPage} from '../actionSheet/actionSheet'
@@ -11,6 +13,10 @@ import {QosConfig} from '../config/qosConfig'
 import {FkConfig} from '../config/fkConfig'
 import {ZfConfig} from '../config/zfConfig'
 import {DmzConfig} from '../config/dmzConfig'
+import {XgConfig} from '../config/xgConfig'
+import {YxConfig} from '../config/yxConfig'
+
+
 
 export class GetMenuPage{
 
@@ -63,6 +69,21 @@ export class GetMenuPage{
           },{
               page:DmzConfig,
               index:7,
+              title:"dmz",
+              icon:"contacts"
+          },{
+              page:XgConfig,
+              index:8,
+              title:"修改管理密码",
+              icon:"contacts"
+          },{
+              page:YxConfig,
+              index:9,
+              title:"运行状态",
+              icon:"contacts"
+          },{
+              page:Home,
+              index:19,
               title:"dmz",
               icon:"contacts"
           }

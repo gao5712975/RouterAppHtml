@@ -19,6 +19,7 @@
         </ion-segment>
     </div>
     <div [ngSwitch]="wifi">
+    	
         <!--  -->
         <div *ngSwitchWhen="'pppoe'" class="wf-pppoe">
             <ion-list>
@@ -41,6 +42,7 @@
                 <button block clear (click)="goToHome3()" class="cancel-butto">跳过，暂不设置</button>
             </div>
         </div>
+        
         <!--  -->
         <div *ngSwitchWhen="'autoIp'" class="wf-autoIp">
             <p>路由器连接运营商提供的端口即可以直接上网</p>
@@ -49,6 +51,7 @@
                 <button block clear (click)="goToHome3()" class="cancel-butto">跳过，暂不设置</button>
             </div>
         </div>
+        
         <!--  -->
         <div *ngSwitchWhen="'manualIp'" class="wf-manualIp">
             <ion-list>
