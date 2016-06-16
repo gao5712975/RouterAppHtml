@@ -6,6 +6,7 @@ import {Home} from '../home/home'
 import {IndexPage} from '../index/index'
 import {ConfigPage} from '../config/config'
 import {ActionSheetPage} from '../actionSheet/actionSheet'
+
 import {WlConfigPage} from '../config/wlConfig'
 import {HmdConfig} from '../config/hmdConfig'
 import {GzConfig} from '../config/gzConfig'
@@ -15,7 +16,8 @@ import {ZfConfig} from '../config/zfConfig'
 import {DmzConfig} from '../config/dmzConfig'
 import {XgConfig} from '../config/xgConfig'
 import {YxConfig} from '../config/yxConfig'
-
+import {RzConfig} from '../config/rzConfig'
+import {SjConfig} from '../config/sjConfig'
 
 
 export class GetMenuPage{
@@ -82,11 +84,17 @@ export class GetMenuPage{
               title:"运行状态",
               icon:"contacts"
           },{
-              page:Home,
-              index:19,
-              title:"dmz",
+              page:RzConfig,
+              index:10,
+              title:"日志记录",
+              icon:"contacts"
+          },{
+              page:SjConfig,
+              index:11,
+              title:"在线升级",
               icon:"contacts"
           }
+          
       )
       return this.pages;
     }

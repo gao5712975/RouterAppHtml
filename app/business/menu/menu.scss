@@ -38,7 +38,7 @@ ul,li{list-style-type:none}
 
 .wf-WIFI .conrent-text{position: relative;}
 .wf-WIFI .conrent-text div{width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #F3F3F3;
-                        position: absolute;top: -25px;right: 20px;}
+position: absolute;top: -25px;right: 20px;}
 .wf-WIFI .conrent-text2{border-bottom: 1px solid #E8E8E8;}
 .wf-WIFI .conrent-text p{padding: 1rem 1rem;}
 
@@ -104,46 +104,15 @@ ul,li{list-style-type:none}
 .yxConfig ion-list{margin: 0;}
 
 
+//日志记录
+.rz-Config ion-list{margin: 0;}
+.rz-Config ion-list h3{font-size: 1.8rem;color: #428BEF;margin:1rem 0 0.5rem 0;}
+.rz-Config ion-list p{white-space: normal;font-size: 1.4rem;}
+.rz-Config ion-list > .item:last-child{border-bottom: 0;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//固件升级
+.sjConfig div .text span:first-child{display: block;font-size: 1.4rem;color: #a0a0a0;}
+.sjConfig div .text span:nth-child(2){color: #3B88F3;font-size: 1.8rem;margin-top: 0.5rem;}
 
 
 
