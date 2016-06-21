@@ -3,7 +3,7 @@
  */
 
 import {Home} from '../home/home'
-import {IndexPage} from '../index/index'
+import {SbIndex} from '../index/sbIndex'
 import {ConfigPage} from '../config/config'
 import {ActionSheetPage} from '../actionSheet/actionSheet'
 
@@ -29,7 +29,7 @@ export class GetMenuPage{
     getMenuPage(){
       this.pages.push(
           {
-              page:IndexPage,
+              page:SbIndex,
               index:0,
               title:"工作模式",
               icon: 'calendar'

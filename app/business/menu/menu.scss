@@ -18,8 +18,6 @@ ul,li{list-style-type:none}
 .wf-menu-content-ion img{width: 1.75rem;height: 1.75rem;margin: 1.1rem 0;}
 .wf-menu-content-ion p{font-size: 1.6rem;color: #ffffff;}
 
-
-
 .wf-skip-buttom button{width: 90%;margin:3rem auto;}
 
 
@@ -120,6 +118,49 @@ position: absolute;top: -25px;right: 20px;}
 .wf-hyIndex .huIndex-top img{ display: block;margin: auto;padding: 4rem 0 1rem 0;}
 .wf-hyIndex .huIndex-top p{color:#FEFEFE ;font-size: 2.4rem;text-align: center;}
 .wf-hyIndex .next-button{padding-top: 13rem;}
+
+//运营商错误
+.cw-Index .cw-Index-top{height: 26rem;}
+.cw-Error-hint{height: 3rem;background-color: #2b77dc;font-size: 1.2rem;text-align: center;line-height: 3rem;color: #7aabee;}
+.cw-Index .cw-Index-top .cw-Index-text{width: 325px;margin: 0 auto;}
+.cw-Index .cw-Index-top .cw-Index-text p{font-size: 1.4rem;color: #fff;text-align: -webkit-left;}
+.cw-Index .content-p{margin: 0;display: block;}
+.cw-Index .content-p ion-item{border-bottom: 0;}
+.cw-Index .content-frame{margin-top: 0;}
+.cw-Index .content-frame .content-frame-img img{height: 3rem;width: auto;margin-top: 0.5rem;}
+.cw-Index .content-frame .content-frame-img2 img{height: 1.5rem;width: auto;margin: 1.2rem 0 0 2rem;}
+.cw-Index .content-frame .item-inner{border-bottom: 0;}
+.cw-Index .content-frame .item{border-top: 1px solid #f1f1f1;}
+//链接错误
+.le-Index .cw-Index-top img{width: 28rem;}
+
+//ip链接错误
+.ip-Index .cw-Index-top{position: relative;}
+.ip-Index .huIndex-top img{width: 11rem;padding: 1rem 0 0 0;}
+.ip-Index .huIndex-top p{font-size: 1.2rem;margin: 0.3rem;}
+.ip-Index .index-button{margin: auto;width: 28rem;}
+.ip-Index .index-button button{width: 13rem;background-color: #2a81f7;border: 1px #fff solid;}
+.ip-Index .index-bottom{position: absolute;bottom: 0;width: 100%;height: 3rem;border-top: 1px #3c88ef solid;background-color: #2575e5;}
+.ip-Index .index-bottom p{width: 10rem;display: inline-block;line-height: 3rem;margin: 0;position: relative;color: #91baf3;}
+.ip-Index .index-bottom p:nth-child(2){float: right;}
+.ip-Index .index-bottom p img{position: absolute;width: 2rem;left: 0.2rem;bottom: 0.8rem;}
+.ip-Index .index-bottom p:nth-child(2) img{width: 1rem;bottom: 1rem;left: 0;}
+
+//设备详情
+.sb-Index .cw-Index-top{height: 9rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
