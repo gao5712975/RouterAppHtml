@@ -1,0 +1,38 @@
+<ion-navbar *navbar wifi>
+	<button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+	<ion-title text-center>中继模式 开启1111111</ion-title>
+</ion-navbar>
+
+<ion-content class="wf-hyIndex  cw-Index ip-Index sb-Index zj-index-frame">
+
+	<div class="huIndex-top zj-index">		
+		<img item-right src="./build/static/img/index/zj-index1.png" />
+	</div>
+	
+	<ion-list class="wf-WIFI wf-manualIp">
+		<ion-item>
+            <ion-label fixed>当前地址</ion-label>
+            <ion-input text-right type="text" placeholder="192.168.1.1"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>当前WIFI</ion-label>
+            <ion-input text-right type="text" placeholder="ycmedia-sj"></ion-input>
+        </ion-item>
+         <ion-item>
+            <ion-label fixed>中继WIFI</ion-label>
+            <ion-input text-right type="text" placeholder="ycmedia-sj"></ion-input>
+        </ion-item>
+	</ion-list>
+
+	
+	<div class="wf-skip-buttom wf-skip-buttom1 zj-index-bottom">
+		<button wifi block (click)="zjConfig1()">切换中继路由器</button>
+	</div>
+
+	<div class="wf-skip-buttom wf-skip-buttom1">
+		<button wifi block (click)="zjConfig2()">切换至有线中继模式</button>
+	</div>
+
+</ion-content>

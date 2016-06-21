@@ -6,64 +6,43 @@
 </ion-navbar>
 
 <ion-content class="wf-hyIndex  cw-Index ip-Index sb-Index">
-	
-	
 
-		<div class="huIndex-top cw-Index-top">
-			
-			<div>
-				<p>SADS</p>
-				<!--<div class="index-bottom">
-					<p><img src="./build/static/img/index/ip-index1.png"/>路由器模式</p>
-					<p><img src="./build/static/img/index/ip-index2.png"/>上行速度 5 KB/S</p>
-				</div>-->
+	<div class="huIndex-top cw-Index-top">
+
+		<div class="Index-top-text">
+			<p>Hakuna Matata</p>
+			<div class="index-top-div">
+				<p>334
+					<span>KB/S</span>
+					<img src="./build/static/img/index/ip-index2.png" />
+				</p>
+				<p>863
+					<span>KB/S</span>
+					<img src="./build/static/img/config/QOS-bottom.png" />
+				</p>
 			</div>
-			
 		</div>
+		
+		<img item-right src="./build/static/img/index/sb-index.png" />
 
-		
-		<ion-list class="content-p">			
-			<ion-item>		
-			  <ion-p item-left>在线设备</ion-p>
-			  <ion-p item-right>6台</ion-p>
-			</ion-item>
-		</ion-list>
-		
-		<ion-list class="content-frame">
-		  <ion-item>
-		    <ion-avatar item-left class="content-frame-img">
-		      <img src="../../build/static/img/config/phone.png">
-		    </ion-avatar>
-		    <h2>2222222222</h2>
-		    <p item-right fixed>30min</p>
-		    <ion-avatar item-right class="content-frame-img2">
-		      <img src="../../build/static/img/index/right.png">
-		    </ion-avatar>
-		  </ion-item>
-		  
-		  <ion-item>
-		    <ion-avatar item-left class="content-frame-img">
-		      <img src="../../build/static/img/config/computer.png">
-		    </ion-avatar>
-		    <h2>2222222222</h2>
-		    <p item-right fixed>30min</p>
-		    <ion-avatar item-right class="content-frame-img2">
-		      <img src="../../build/static/img/index/right.png">
-		    </ion-avatar>
-		  </ion-item>
-		  
-		  <ion-item>
-		    <ion-avatar item-left class="content-frame-img">
-		      <img src="../../build/static/img/config/ipd.png">
-		    </ion-avatar>
-		    <h2>2222222222</h2>
-		    <p item-right fixed>30min</p>
-		    <ion-avatar item-right class="content-frame-img2">
-		      <img src="../../build/static/img/index/right.png">
-		    </ion-avatar>
-		  </ion-item>
-		  
-		</ion-list>
-		
-		
+	</div>
+	
+	<ion-list class="wf-WIFI wf-manualIp">
+		<ion-item>
+            <ion-label fixed>MAC地址</ion-label>
+            <ion-input text-right type="text" placeholder="18:F6:43:3B:3B:D7"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>IP地址</ion-label>
+            <ion-input text-right type="text" placeholder="192.168.31.193"></ion-input>
+        </ion-item>
+	</ion-list>
+
+	<ion-list class="wf-WIFI wf-manualIp">
+		<ion-item>
+            <ion-label fixed>加入黑名单</ion-label>
+          
+       </ion-item>
+	</ion-list>
+
 </ion-content>

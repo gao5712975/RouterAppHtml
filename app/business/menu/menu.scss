@@ -147,16 +147,20 @@ position: absolute;top: -25px;right: 20px;}
 .ip-Index .index-bottom p:nth-child(2) img{width: 1rem;bottom: 1rem;left: 0;}
 
 //设备详情
+.sb-Index {background-color: #FAFAFA;}
 .sb-Index .cw-Index-top{height: 9rem;}
+.sb-Index .cw-Index-top .Index-top-text{width: 16rem;padding-top: 3rem;float: left;}
+.sb-Index .cw-Index-top .Index-top-text > p{margin: 0;font-size: 1.8rem;}
+.sb-Index .cw-Index-top .index-top-div{margin-left: 2rem;}
+.sb-Index .cw-Index-top .index-top-div p{display: inline-block;font-size: 1.2rem;width: 6rem;margin: 0;position: relative;}
+.sb-Index .cw-Index-top .index-top-div p span{color: #9ac2fa;}
+.sb-Index .cw-Index-top > img{width: 3rem;float: right;padding: 0;margin: 2rem 3rem 0 0;}
+.sb-Index .cw-Index-top .index-top-div p img{position: absolute;right: -0rem;width: 0.7rem;top: 0.2rem;padding: 0;}
 
-
-
-
-
-
-
-
-
+//中继模式
+.wf-hyIndex .zj-index{height: 12rem;}
+.wf-hyIndex .zj-index img{width: 27rem;padding: 2rem 0;}
+.zj-index-frame .zj-index-bottom{margin-top: 10rem;}
 
 
 
