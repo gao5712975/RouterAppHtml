@@ -162,16 +162,89 @@ position: absolute;top: -25px;right: 20px;}
 .wf-hyIndex .zj-index img{width: 27rem;padding: 2rem 0;}
 .zj-index-frame .zj-index-bottom{margin-top: 10rem;}
 
+//首页
+.sy-Index .wf-pppoe .huIndex-top p{margin: 0;border-top: 1px #5D9DF4 solid;margin: 0 1rem;height: 2rem;line-height: 2rem;color: #AFC9FA;}
+
+.sy-Index .wf-pppoe .huIndex-top .cssBox  img{width: auto;margin: 0;padding: 0;}
 
 
 
 
 
 
+    .cssBox{
+        position: relative;
+        height: 24rem;
+        overflow: hidden;
+    }
+        
+    .cssBox .waveRaidus img{
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-animation: waveRaidus 6s ease-out 0s infinite;
+        animation: waveRaidus 6s ease-out 0s infinite;              
+    }
+    
+    @-webkit-keyframes waveRaidus {
+        0% {                    
+            width: 20%;
+            opacity: 0.8;
+        }
 
+        100% {
+            width: 130%;
+            opacity: 0;
+        }
+    }        
 
+    .cssBox .waveRaidus1 img{
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-animation: waveRaidus1 6s ease-out 2s infinite;
+        animation: waveRaidus1 6s ease-out 2s infinite;
+    }
+    
+    @-webkit-keyframes waveRaidus1 {
+        0% {
+            width: 20%;
+            opacity: 0.8;
+        }
 
-
+        100% {
+            width: 130%;
+            opacity: 0;
+        }
+    }
+    
+    .cssBox .waveRaidus2 img{
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-animation: waveRaidus2 6s ease-out 4s infinite;
+        animation: waveRaidus2 6s ease-out 4s infinite;
+    }
+    
+    @-webkit-keyframes waveRaidus2 {
+        0% {
+            width: 20%;
+            opacity: 0.8;
+        }
+        100% {
+            width: 130%;
+            opacity: 0;
+        }
+    }
 
 
 
